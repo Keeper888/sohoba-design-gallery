@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOHOBA Website Design Gallery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /*
+         * Demo Sources & Attribution:
+         * - Typography Scroll Animations: https://tympanus.net/Development/OnScrollTypographyAnimations/index2.html
+         * - Gooey Image Hover Effects: https://tympanus.net/Tutorials/GooeyImageHoverEffects/
+         * - 3D Folding DOM Effects: https://tympanus.net/Tutorials/FoldingDOM/index4.html
+         * - Author: Codrops (https://tympanus.net/codrops/)
+         */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --soho-midnight: #1A1A1A;
+            --soho-gold: #D4A574;
+            --soho-crimson: #C41E3A;
+            --soho-clay: #E8DDD5;
+            --pure-white: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--pure-white);
+            background: var(--soho-midnight);
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #1A1A1A 0%, #2A2A2A 100%);
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .logo {
+            max-width: 400px;
+            margin: 0 auto 3rem;
+        }
+
+        .logo img {
+            width: 100%;
+            height: auto;
+            filter: brightness(0) invert(1);
+        }
+
+        .hero h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .hero h1 .highlight {
+            background: linear-gradient(135deg, var(--soho-gold) 0%, var(--soho-crimson) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.9);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .scroll-hint {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--soho-gold);
+            margin-top: 3rem;
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* Demo Sections */
+        .demo-section {
+            min-height: 100vh;
+            padding: 4rem 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .demo-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .demo-header h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--soho-gold);
+            margin-bottom: 1rem;
+        }
+
+        .demo-header p {
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.8);
+            max-width: 700px;
+            margin: 0 auto 1rem;
+        }
+
+        .demo-frame {
+            width: 100%;
+            height: calc(100vh - 250px);
+            min-height: 600px;
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 8px;
+            background: white;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+        }
+
+        /* Footer */
+        .footer {
+            padding: 3rem 2rem;
+            text-align: center;
+            background: #0A0A0A;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .footer p {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .demo-header h2 {
+                font-size: 1.8rem;
+            }
+
+            .demo-frame {
+                height: 500px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Introduction -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="logo">
+                <img src="SBA_logo_black.png" alt="Soho Business Alliance">
+            </div>
+            <h1>Website Design <span class="highlight">Gallery</span></h1>
+            <p>
+                Welcome! This is a gallery of design concepts and interactive effects I can use to build your new Soho Business Alliance website.
+                Scroll through the demos below and pick the styles that best represent your vision.
+            </p>
+            <p style="font-size: 1rem; color: rgba(255,255,255,0.7);">
+                Each demo below showcases different animation and interaction techniques that can be adapted to your brand.
+            </p>
+            <div class="scroll-hint">Scroll to explore ↓</div>
+        </div>
+    </section>
+
+    <!-- Demo 1: Typography Animations -->
+    <section class="demo-section" id="demo1">
+        <div class="demo-header">
+            <h2>Typography Scroll Animations</h2>
+            <p>
+                Stunning text animations that activate as you scroll. Perfect for headlines, hero sections, and storytelling content.
+                This effect creates engaging, dynamic typography that captures attention.
+            </p>
+        </div>
+        <iframe
+            src="https://tympanus.net/Development/OnScrollTypographyAnimations/index2.html"
+            class="demo-frame"
+            title="Typography Scroll Animations Demo"
+            loading="lazy">
+        </iframe>
+    </section>
+
+    <!-- Demo 2: Gooey Hover Effects -->
+    <section class="demo-section" id="demo2">
+        <div class="demo-header">
+            <h2>Gooey Image Hover Effects</h2>
+            <p>
+                Interactive image tiles with smooth, liquid-like hover effects using WebGL.
+                Ideal for showcasing member businesses, portfolios, or featured content with a modern, high-end feel.
+            </p>
+        </div>
+        <iframe
+            src="https://tympanus.net/Tutorials/GooeyImageHoverEffects/"
+            class="demo-frame"
+            title="Gooey Image Hover Effects Demo"
+            loading="lazy">
+        </iframe>
+    </section>
+
+    <!-- Demo 3: 3D Folding Content -->
+    <section class="demo-section" id="demo3">
+        <div class="demo-header">
+            <h2>3D Folding DOM Effects</h2>
+            <p>
+                Elegant 3D folding transitions between content sections.
+                Creates a unique, memorable experience for navigating different categories or showcasing various business sectors.
+            </p>
+        </div>
+        <iframe
+            src="https://tympanus.net/Tutorials/FoldingDOM/index4.html"
+            class="demo-frame"
+            title="3D Folding DOM Demo"
+            loading="lazy">
+        </iframe>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Soho Business Alliance Website Design Concepts</p>
+    </footer>
+
+</body>
+</html>
